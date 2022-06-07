@@ -55,6 +55,11 @@ blockchain = Blockchain()
 t1 = blockchain.new_transaction("Mitchell", "Village Property Management", "0.083 BTC")
 t2 = blockchain.new_transaction("Ilsa", "Mitchell", "0.041 BTC")
 t3 = blockchain.new_transaction ("Judo", "Village Property Management", "0.041 BTC")
-blockchain.new_block(1)
+blockchain.new_block(1234)
+
+t4 = blockchain.new_transaction("Mitchell", "SDGE", "0.0075 BTC")
+t5 = blockchain.new_transaction("Ilsa", "Mitchell", "0.0025 BTC")
+t6 = blockchain.new_transaction("Judo", "Mitchell", "0.0025 BTC")
+blockchain.new_block(5678)
 
 print("Blockchain: ", blockchain.chain)
