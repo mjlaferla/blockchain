@@ -41,10 +41,20 @@ class Blockchain(object):
         return self.last_block['index'] + 1
     
     def hash(self, block):
-        string_object =json.dumps(block, sort_keys=True):
+        string_object =json.dumps(block, sort_keys=True)
         block_string = string_object.encode()
 
         raw_hash = hashlib.sha256(block_string)
         hex_hash = raw_hash.hexdigest()
 
         return hex_hash
+
+
+
+blockchain = Blockchain()
+t1 = blockchain.new_transaction("Mitchell", "Village Property Management", "0.083 BTC")
+t2 = blockchain.new_transaction("Ilsa", "Mitchell", "0.041 BTC")
+t3 = blockchain.new_transaction ("Judo", "Village Property Management", "0.041 BTC")
+blockchain.new_block(1)
+
+print("Blockchain: ", blockchain.chain)
